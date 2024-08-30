@@ -1,0 +1,12 @@
+flask-security
+flask-session
+python-dotenv
+redis
+flask-sqlalchemy
+flask-bcrypt
+flask
+flask_cors
+requests
+pandas
+matplotlib
+numpy
