@@ -1,0 +1,20 @@
+services:
+  server:
+    container_name: pythonserver
+    image: martinminotti/pythonserver:2.6
+    ports:
+      - "5000:5000"
+    depends_on:
+      - redis
+  redis:
+    container_name: redis
+    image: redis/redis-stack-server:latest
+    ports:
+      - "6379:6379"
+  client:
+    container_name: react-nginx
+    image: martinminotti/reactclient:3.5
+    ports:
+      - "80:80"
+    depends_on:
+      - server
